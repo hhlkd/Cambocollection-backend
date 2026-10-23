@@ -10,7 +10,7 @@ return new class extends Migration
     {
         if (!Schema::hasColumn('orders', 'discount')) {
             Schema::table('orders', function (Blueprint $table) {
-                $table->decimal('discount', 10, 2)->default(0)->after('subtotal');
+                $table->decimal('discount', 10, 2)->default(0);
             });
         }
     }

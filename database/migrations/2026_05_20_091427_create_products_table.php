@@ -28,7 +28,7 @@ return new class extends Migration
             $table->integer('views')->default(0);
             $table->timestamps();
             $table->softDeletes(); // Soft delete for product history
-             $table->enum('gender', ['men', 'women', 'unisex'])->nullable()->after('category_id');
+            $table->enum('gender', ['men', 'women', 'unisex'])->nullable();
         });
     }
 
